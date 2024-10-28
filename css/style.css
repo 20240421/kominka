@@ -1,0 +1,2085 @@
+@media all {
+html,
+    body,
+    div,
+    span,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    abbr,
+    address,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    samp,
+    small,
+    strong,
+    sub,
+    sup,
+    var,
+    b,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        /* outline: 2px red solid; */
+    }
+
+
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+    color: rgba(255, 255, 255, 1);
+    font-family: "ten-mincho", serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    color: rgba(255, 255, 255, 1);
+}
+
+li {
+    list-style: none;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.blur-moji {
+    animation-name: blur;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blur {
+    from {
+        filter: blur(50px);
+    }
+
+    to {
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
+    position: fixed;
+    transition: padding .5s, background-color .5s;
+}
+
+.header-logo {
+    width: 150px;
+    margin: 20px;
+    position: relative;
+}
+
+.header-logo span {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.header-img img {
+    width: 93%;
+    object-fit: cover;
+}
+
+.nav {
+    position: absolute;
+    top:0%;
+    right: 0%;
+    margin: 2%;
+}
+
+.menu-group {
+    display: flex;
+}
+
+.menu-item {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem);
+    font-style: italic;
+    letter-spacing: 0.3em;
+    height: fit-content;
+    margin: 0 12px;
+}
+
+.menu-style {
+    display: inline;
+    padding: 5px;
+}
+
+.menu-style:hover {
+    border: 1px solid rgba(217, 217, 217, 0.8);
+    
+}
+
+.nav-hover {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.moji-kotei {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.slider img {
+    object-fit: cover;
+    width: 100%;
+    height: 100dvh;
+}
+
+.slider:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-moji {
+    z-index: 9998;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-style: italic;
+    font-size: clamp(1.438rem, 0.857rem + 2.9vw, 2.25rem);
+    letter-spacing: 0.1em;
+}
+
+.sub-moji {
+    z-index: 9998;
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+}
+
+.sub-moji1 {
+    font-size: clamp(1.25rem, 1rem + 1.25vw, 2rem);
+    font-style: italic;
+    padding: 20px 0px 20px 120px;
+    position: relative;
+    letter-spacing: 0.1em;
+}
+
+.sub-moji2 {
+    font-size: clamp(0.875rem, 0.75rem + 0.63vw, 1.25rem);
+    font-style: italic;
+    padding-left: 140px;
+    letter-spacing: 0.07em;
+}
+
+.sub-moji1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+}
+
+.main-btn {
+    z-index: 9998;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background-color: rgba(175, 151, 112, 1);
+    border: 1px solid rgba(175, 151, 112, 1);
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-btn-moji {
+    color: rgba(46, 46, 46, 1);
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.arrow {
+    display: inline-block;
+    width: 40px;
+    height: 8px;
+    background: rgba(46, 46, 46, 1);
+    clip-path: polygon(0 43.8%, 82.7% 43.8%, 82.7% 0, 100% 50%, 82.7% 100%, 82.7% 56.3%, 0 56.3%);
+}
+
+.concept h1 {
+    font-family: "sheila", sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.875rem, 3.667rem + 1.04vw, 4.5rem);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(148, 148, 148, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.concept h2 {
+    font-size: clamp(1.125rem, 1rem + 0.63vw, 1.5rem);
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.concept h2::after {
+    background-color: rgba(255, 255, 255, 1);
+    content: "";
+    height: 1px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.concept p{
+    margin-top: 50px;
+    width: 87%;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    line-height: 1.5em;
+}
+
+a.concept-btn,a.rooms-btn,
+a.price-btn,a.access-btn,a.rooms-reserv-btn {
+    margin-top: 50px;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    padding: 6px 0;
+    border: 1px solid rgba(175, 151, 112, 1);
+    background: rgba(175, 151, 112, 1);
+    color: rgba(18, 18, 18, 1);
+    transition: 0.5s;
+    line-height: 20px;
+    padding: 8px 0 10px 0;
+}
+
+a.concept-btn:hover,a.rooms-btn:hover,
+a.price-btn:hover,a.access-btn:hover,a.menu-btn:hover,a.reservation-btn:hover,a.main-btn:hover,a.rooms-reserv-btn:hover {
+    border: 1px solid rgb(129, 97, 46);
+    color: rgba(18, 18, 18, 1);
+    background: rgb(129, 97, 46);
+}
+
+.concept p1 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+    font-style: italic;
+    letter-spacing: 0.3em;
+    line-height: 2em;
+    padding-top: 80px;
+}
+
+.concept {
+    margin: 90px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.rooms {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title2, .rooms-flex {
+    display: flex;
+}
+
+.title2 {
+    align-items: flex-end;
+}
+
+.title2-style {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.rooms-abso {
+    margin-top: 80px;
+}
+
+.rooms-top-ul {
+    padding-right: 30px;
+}
+
+.rooms-detail {
+    padding-top: 50px;
+}
+
+.rooms-moji {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+}
+
+.title2 h1,.title3 h1,
+.title4 h1,.title5 h1,.title6 h1,
+.title7 h1 {
+    font-family: "sheila", sans-serif;
+    font-weight: 700;
+    font-size: clamp(3.875rem, 3.667rem + 1.04vw, 4.5rem);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(148, 148, 148, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title2 h2 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: clamp(1.125rem, 1rem + 0.63vw, 1.5rem);
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    margin-left: -120px;
+}
+
+.title2 h2 {
+    position: relative;
+    display: inline-block;
+    line-height: 65px;
+}
+
+.title2 h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 80px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.rooms {
+    padding: 100px 0;
+    max-width: 1280px;
+    margin:  0 auto;
+}
+
+.rooms-style {
+    margin: 0 10%;
+}
+
+.rooms-price {
+    font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem);
+    width: fit-content;
+    --bg-gradient: linear-gradient(rgba(255, 255, 255, 1) 0 100%);
+    padding: 1.5rem;
+    background-image:
+        var(--bg-gradient),
+        var(--bg-gradient),
+        var(--bg-gradient),
+        var(--bg-gradient);
+    background-repeat: no-repeat;
+    background-size: 30px 1px, 1px 30px, 30px 1px, 1px 30px;
+    background-position: left top 5px, right 5px bottom, right bottom 5px, left 5px top;
+}
+
+.rooms-price p {
+    line-height: 1.5;
+}
+
+.rooms img{
+    width: 100%;
+    height: 394px;
+    object-fit: cover;
+}
+
+.rooms-detail p {
+    text-align: center;
+    font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem);
+    line-height: 2em;
+}
+
+.rooms-btn,.price-btn,.rooms-reserv-btn {
+    margin: 0 auto;
+}
+
+.title3,.title4,
+.title6,.title7 {
+    text-align: center;
+}
+
+.title3 h2,.title4 h2,
+.title6 h2,.title7 h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.price-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 0 10%;
+
+}
+
+.price-detail1-1,.price-detail1-2,.price-detail1-3,.price-detail2-1,.price-detail2-2 {
+    padding: 15px 0;
+}
+
+.price-detail2 {
+    padding-left: 50px;
+}
+
+.price-btn, .rooms-reserv-btn {
+    font-size: 18px;
+}
+
+.back-style {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 0 40px 0;
+}
+
+.price {
+    background: rgba(0, 0, 0, 0.2) url("price_img.jpg");
+    position: relative;
+    height: 530px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a.price-btn {
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+}
+
+.gallery {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.title4,.title6 {
+    padding-bottom: 50px;
+}
+
+.title5 h2 {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    margin-top: -35px;
+    justify-content: flex-end;
+}
+
+.title5 h2::after {
+    background-color: rgba(255, 255, 255, 1);
+    content: "";
+    height: 1px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 370px;
+    margin-right: 60px;
+}
+
+.access-style {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.access-flex {
+    display: flex;
+    align-items: flex-end;
+}
+
+.title5 h1{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.access-detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+.access-padd {
+    margin: 10% 0 5% 0;
+}
+
+.access p {
+    font-size: clamp(0.938rem, 0.917rem + 0.1vw, 1rem);
+    letter-spacing: 0.08em;
+}
+
+.access {
+    padding-top: 50px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.faq {
+    padding: 150px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*アコーディオン全体*/
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-area li {
+    margin: 20px 0;
+}
+
+.accordion-area section {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 30px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+.title::before {
+    top: 48%;
+    right: 20px;
+    transform: rotate(0deg);
+}
+
+.title::after {
+    top: 48%;
+    right: 20px;
+    transform: rotate(90deg);
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;
+    /*はじめは非表示*/
+    background: rgba(255, 255, 255, 1);
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+    color: #000000;
+}
+
+.reservation {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.reservation h3 {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 30px;
+}
+
+.reservation-btn {
+    background-color: rgba(175, 151, 112, 1);
+    border: 1px solid rgba(175, 151, 112, 1);
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reservation-btn-moji {
+    color: rgba(46, 46, 46, 1);
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.title7 {
+    width: 96%;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+.title7 a {
+    margin-top: 30px;
+    font-size: clamp(1.25rem, 1rem + 1.25vw, 2rem);
+}
+
+.reservation {
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("reservation_img.jpg");
+}
+
+.footer-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    border-left: 1px solid #FFFFFF;
+}
+
+.footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 540px;
+    width: 100%;
+    margin-left: 30px;
+    padding-top: 5px;
+}
+
+.footer-right li {
+    height: fit-content;
+    padding: 0 30px;
+}
+
+.footer h4 {
+    font-size: 24px;
+}
+
+.footer {
+    padding: 100px 0 30px 0;
+    background-color: rgba(69, 68, 67, 1);
+    margin: 0 auto;
+}
+
+.footer-left h5,.footer-left h6 {
+    padding-top: 20px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 50px 0 30px 0;
+    font-size: clamp(0.75rem, 0.708rem + 0.21vw, 0.875rem);
+}
+
+.footer-left {
+    padding-left: 20px;
+}
+
+.footer-right a,
+.menu-ul a {
+    display: inline-block;
+    position: relative;
+}
+
+.footer-right a::after,
+.menu-ul a::after {
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 2px;
+    content: "";
+    height: 0.5px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+}
+
+
+.footer-right a:hover::after,
+.menu-ul a:hover::after {
+    bottom: -2px;
+    opacity: 1;
+}
+
+/* ==========ヘッダー・フッター以外のぼかしでふわっと現れるアニメーション＝＝＝＝＝ */
+.blur {
+    animation-name: blurAnime;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes blurAnime {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+.blurTrigger {
+    opacity: 0;
+}
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+/*====================ハンバーガーメニュー======================*/
+
+.hbg-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.transform1,.transform2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    /*はじめは透過0*/
+    /*ナビの位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+    /*動き*/
+    transition: all 1s;
+    display: none;
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive {
+    opacity: 1;
+    z-index: 999999;
+    /* display: block; */
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+    position: fixed;
+    z-index: 99999999;
+    top: 10px;
+    right: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+/*×に変化*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    width: 55%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 18px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 30px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 42px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 21px;
+    left: 15px;
+    transform: translateY(6px) rotate(-25deg);
+    width: 50%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 33px;
+    left: 15px;
+    transform: translateY(-6px) rotate(25deg);
+    width: 50%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.menu-img {
+    width: 50%;
+    min-height: 100vh;
+}
+
+.menu-img img {
+    width: 100%;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh)* 100);
+    object-fit: cover;
+}
+
+.menu-wrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-info {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-ul {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+.menu-li {
+    width: 48.5%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-btn {
+    margin-top: 50px;
+    background-color: rgba(175, 151, 112, 1);
+    border: 1px solid rgba(175, 151, 112, 1);
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-btn-moji {
+    color: rgba(46, 46, 46, 1);
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem);
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.menu-logo{
+    width: 200px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.menu-logo img {
+    width: 93%;
+}
+
+.menu-logo span {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-block {
+    width: 100%;
+}
+
+a.menu-btn, a.reservation-btn, a.main-btn {
+    transition: 0.5s;
+}
+
+/*========================= splash =======================*/
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #022701 url("back_style.png");
+    z-index: 9999999;
+}
+
+#splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+#splash-logo img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/*====== 画面遷移のためのCSS ======*/
+body {
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+    /*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear {
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+    /*画面を開いた後の背景色を指定*/
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2 {
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2 {
+    display: block;
+}
+
+/*上に消えるエリア*/
+body.appear .splashbg1 {
+    animation-name: PageAnime;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 50%;
+    height: 100dvh;
+    top: 0;
+    right: 0;
+    transform: scaleX(1);
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+        /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime {
+    0% {
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+/*下に消えるエリア*/
+body.appear .splashbg2 {
+    animation-name: PageAnime2;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 50%;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    transform: scaleX(1);
+    background: rgba(2, 39, 1, 1) url("back_style.png");
+    /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2 {
+    0% {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+    opacity: 0;
+    /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*========================= splash =======================*/
+
+/* ===========================アバウトページ====================== */
+.about, .rooms-page, .access-page {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1280px;
+}
+
+.about-img {
+    height: 450px;
+}
+
+.about-img img {
+    height: 450px;
+}
+
+.about-title, .rooms-title, .access-title {
+    margin: 0 auto 50px auto;
+    max-width: 400px;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.about-title h1,.rooms-title h1, .access-title h1 {
+    font-size: clamp(1.5rem, 1.333rem + 0.83vw, 2rem);
+    text-align: center;
+}
+
+.about-title-moji, .rooms-title-moji {
+    margin: 0 auto 100px auto;
+    max-width: 400px;
+}
+
+.ab-cont-1, .ab-cont-2 ,.ab-cont-3, .ab-cont-4 {
+    display: flex;
+}
+
+.ab-cont-2,
+.ab-cont-3,
+.ab-cont-4 {
+    padding-top: 150px;
+}
+
+.ab-cont-li h2 {
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 1);
+    padding-bottom: 30px;
+}
+
+.ab-cont-li h3 {
+    font-size: 15px;
+}
+
+.ab-text-left,.ab-text-right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ab-img-right {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 0 0 auto;
+}
+
+.ab-img-left {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto 0 0;
+}
+
+.ab-text-mar {
+    padding-top: clamp(3.125rem, 1.458rem + 8.33vw, 8.125rem);
+    max-width: 280px;
+}
+
+/* ===========================お部屋についてページ====================== */
+.madori-title {
+    padding-top: 130px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.rooms-wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rooms-ul {
+    width: 40%;
+    margin: 30px;
+}
+
+.rooms-ul img {
+    object-fit: cover;
+}
+
+.rooms-ul p {
+    font-size: 15px;
+}
+
+.rooms-reserv-btn {
+    margin-top: 50px;
+}
+
+.rooms-madori {
+    width: 40%;
+    margin: 30px;
+}
+
+.madori-wrap {
+    text-align: center;
+}
+
+.rooms-madori h2{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.equipment-detail,.amenities-detail,.charge-detail {
+    width: 90%;
+    margin: 80px auto 30px auto;
+}
+
+.equip-h1,.amen-h1,.charge-h1,.spot-h1 {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.equip-h1:before,
+.equip-h1:after,
+.amen-h1:before,
+.amen-h1:after,
+.charge-h1:before,
+.charge-h1:after,
+.spot-h1:before,
+.spot-h1:after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.equip-h1:before,.amen-h1:before,.charge-h1:before,.spot-h1:before {
+    margin-right: 1rem;
+}
+
+.equip-h1:after,.amen-h1:after,.charge-h1:after,.spot-h1:after{
+    margin-left: 1rem;
+}
+
+.equip-table, .ameni-table,.charge-table {
+    max-width: 1000px;
+    width: 100%;
+    margin: 50px auto 120px auto;
+    text-align: left;
+    border-collapse:collapse;
+    font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
+}
+
+.equip-table th, .ameni-table th, .charge-table th {
+    width: 25%;
+    max-width: 300px;
+    padding: 40px 40px 40px 20px;
+}
+
+.equip-table th,
+.equip-table td,
+.ameni-table th,
+.ameni-table td,
+.charge-table th,
+.charge-table td {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+    padding: 30px 40px 30px 50px;
+    line-height: 1.4;
+}
+
+.equip-border-top th,
+.ameni-border-top th,
+.charge-border-top th {
+    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.equip-border-top td,
+.ameni-border-top td,
+.charge-border-top td {
+    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.amenities-detail {
+    max-width: 1000px;
+}
+
+.ameni-wrap {
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.ameni-wrap ul {
+    width: 31%;
+    margin: 10px;
+}
+
+.ac-cont {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    padding-top: 50px;
+}
+
+.ac-cont-li-left {
+    margin: 0 30px;
+}
+
+.ac-cont-li-right {
+    width: 55%;
+}
+
+.spot {
+    margin: 150px auto 50px auto;
+    width: 90%;
+}
+
+.spot-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: 50px auto;
+}
+
+.spot-ul {
+    width: 30%;
+    padding: 20px 0;
+}
+
+.spot-wrap li {
+    width: 100%;
+}
+
+.spot-ul img {
+    object-fit: cover;
+}
+
+.spot-ul p {
+    font-size: 15px;
+}
+
+.spot h2, .spot h3 {
+    font-size: 15px;
+}
+
+
+
+}
+
+@media screen and (max-width:768px) {
+nav {
+    display: none;
+}
+
+.hbg-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.openbtn span {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.main-btn, .main-btn-moji {
+    display: none;
+}
+
+.sp-main-btn {
+    z-index: 9998;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.sp-main-btn .sp-main-btn01 {
+    flex-grow: 1;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(175, 151, 112, 1);
+}
+
+.sp-main-btn .sp-main-btn01::after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: rgba(46, 46, 46, 1);
+}
+
+.sp-main-btn .sp-main-btn02 {
+    flex-grow: 1;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(175, 151, 112, 1);
+}
+
+.sp-main-btn01, .sp-main-btn02 {
+    width: 50%;
+}
+
+.sp-main-btn01 a, .sp-main-btn02 a {
+    color: rgba(46, 46, 46, 1);
+    font-style: italic;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+}
+
+.concept-moji {
+    display: none;
+}
+
+.title1 {
+    margin: 0 auto;
+}
+
+.concept h1, .title5 h1 {
+    text-align: center;
+}
+
+.sp-concept-moji, .concept h2, .rooms h3, .price h2, .gallery h2, .access h2, .faq h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.concept h2::before, .title2 h3::before, .price h2::before, .gallery h2::before, .access h2::before, .faq h2::before {
+    background-color: rgba(255, 255, 255, 1);
+    content: "";
+    height: 1px;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.concept h2::after, .title2 h3::after , .price h2::after, .gallery h2::after, .access h2::after, .faq h2::after{
+    background-color: rgba(255, 255, 255, 1);
+    content: "";
+    width: 20%;
+    height: 1px;
+    margin-left: 10px;
+}
+
+.concept-btn, .rooms-btn {
+    margin: 0 auto;
+}
+
+.concept p {
+    width: 100%;
+}
+
+.concept p1 {
+    padding-top: 50px;
+}
+
+.title2 {
+    display: block;
+}
+
+.title2-style {
+    width: auto;
+    height: auto;
+    position: static;
+}
+
+.rooms-moji {
+    text-align: center;
+    position: static;
+    width: auto;
+    transform: none;
+    transform-origin: 50% 50% 0;
+}
+
+.title2 h3 {
+    font-size: clamp(1.125rem, 1rem + 0.63vw, 1.5rem);
+    align-items: center;
+    margin-top: -20px;
+}
+
+.title2 h2 {
+    display: none;
+}
+
+.rooms img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    margin: 50px auto;
+    display: block;
+}
+
+.rooms-abso {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 35px;
+}
+
+.rooms-style {
+    margin: 0 10%;
+}
+
+.rooms-detail {
+    text-align: center;
+}
+
+.back-style {
+    background-color: transparent;
+    width: fit-content;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.price {
+    background: none;
+    width: 92%;
+    height: auto;
+}
+
+.price-detail {
+    display: block;
+    padding: 0;
+    margin: 30px auto;
+    font-size: clamp(0.813rem, 0.679rem + 0.67vw, 1rem);
+}
+
+.price-detail2 {
+    padding-left: 0;
+}
+
+.title4 {
+    margin: 0 10%;
+}
+
+.title5 h1 {
+    display: block;
+}
+
+.title5 {
+    padding-left: 0;
+}
+
+.access-flex {
+    display: block;
+    width: 90%;
+    margin: 40px auto 0 auto;
+}
+
+.access-style {
+    margin: 0 auto;
+    width: auto;
+}
+
+.access-detail {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+a.access-btn {
+    margin-top: 20px;
+}
+
+.accordion-area p, .accordion-area h3 {
+    font-size: clamp(0.813rem, 0.679rem + 0.67vw, 1rem);
+}
+
+.title7 {
+    width: 93%;
+}
+
+.footer-flex {
+    display: block;
+    font-size: 15px;
+}
+
+.footer-right {
+    display: block;
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    text-align: center;
+}
+
+.footer-right a::after {
+    background-color: transparent;
+    bottom: 0;
+    content: none;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: static;
+    transition: all .3s;
+    width: auto;
+}
+
+.footer-left {
+    padding-left: 0;
+}
+
+.footer-right li {
+    height: fit-content;
+    padding: 5px 0;
+}
+
+.footer a, .footer h5, .footer p {
+    text-align: center;
+}
+
+.border {
+    border-left: none
+}
+
+.footer-left h6 {
+    padding-bottom: 30px;
+}
+
+.footer {
+    padding: 50px 0 30px 0;
+}
+
+.sub-moji1 {
+    padding: 20px 0px 20px 30px;
+}
+
+.sub-moji2 {
+    padding-left: 60px;
+    margin-top: -8px;
+}
+
+.openbtn span {
+    left: 50px;
+    width: 35%;
+}
+
+.header-logo {
+    width: 120px;
+    margin: 15px;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 10px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 20px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 30px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 15px;
+    left: 36px;
+    width: 42%;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 27px;
+    left: 36px;
+    width: 42%;
+}
+
+header {
+    height: 58px;
+}
+
+.menu-img {
+    display: none;
+}
+
+.menu-wrap {
+    display: block;
+}
+
+.menu-info {
+    width: auto;
+}
+
+#splash-logo img {
+    width: clamp(7.5rem, 3.929rem + 17.86vw, 12.5rem);
+}
+
+#splash-logo span{
+    color: white;
+}
+
+.about-img {
+    height: 300px;
+}
+
+.about-img img {
+    height: 300px;
+}
+
+.sp-main-moji {
+    z-index: 9998;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "sheila", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.about {
+    padding: 80px 0;
+    width: 95%;
+}
+
+.about-title-moji h3 {
+    text-align: center;
+}
+
+.ab-cont-1,
+.ab-cont-2,
+.ab-cont-3,
+.ab-cont-4 {
+    display: block;
+}
+
+.ab-img-right {
+    display: none;
+}
+
+.ab-text-left,
+.ab-text-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.ab-text-mar {
+    padding-top: 30px;
+    max-width: none;
+}
+
+.ab-img-left {
+    width: auto;
+}
+
+.menu-logo {
+    width: clamp(9.375rem, 7.143rem + 11.16vw, 12.5rem);
+}
+
+.menu-ul {
+    display: block;
+}
+
+.menu-li {
+    width: 100%;
+}
+
+.rooms-title-moji h3 {
+    text-align: center;
+}
+
+.rooms-title-moji {
+    margin: 0 auto 50px auto;
+}
+
+.rooms-wrap {
+    display: block;
+}
+
+.rooms-ul {
+    width: auto;
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+.rooms-madori {
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px 0;
+}
+
+.madori-title {
+    padding-bottom: 30px;
+}
+
+.equip-table th,
+.ameni-table th,
+.charge-table th {
+    width: 30%;
+    padding: 40px 0px 40px 20px;
+}
+
+.equip-table th,
+.equip-table td,
+.ameni-table th,
+.ameni-table td,
+.charge-table th,
+.charge-table td {
+    padding: 30px 10px 30px 50px;
+}
+
+.ameni-wrap {
+    margin: 40px auto;
+    display: block;
+    width: 100%;
+}
+
+.ameni-wrap ul {
+    width: auto;
+    margin: 30px auto;
+    max-width: 550px;
+}
+
+.ac-cont {
+    display: block;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.ac-cont-li-right {
+    display: none;
+}
+
+.ac-cont-li-left {
+    padding-top: 30px;
+}
+
+.spot-wrap {
+    display: block;
+    max-width: 1050px;
+    margin: 30px auto;
+}
+
+.spot-ul {
+    width: auto;
+    max-width: 550px;
+    margin: auto;
+}
+
+.spot {
+    margin: 80px auto;
+}
+
+.rooms-page,
+.access-page {
+    padding: 80px 0 0 0;
+    width: 95%;
+}
+
+header.transform {
+    background-color: transparent;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    aspect-ratio: 16/9; 
+}
+
+.rooms-flex {
+    display: block;
+}
+
+.rooms-abso {
+    display: none;
+}
+
+.sp-rooms-abso {
+    display: flex;
+    justify-content: center;
+}
+
+.rooms-top-ul {
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width:450px) {
+.equip-table tr,
+.ameni-table tr,
+.charge-table tr,
+.equip-table td,
+.ameni-table td,
+.charge-table td{
+    width: auto;
+    display: block;
+}
+
+.equip-table td,
+.ameni-table td,
+.charge-table td {
+    padding: 10px 15px 25px 15px;
+}
+
+.equip-table th,
+.ameni-table th,
+.charge-table th{
+    width: 100%;
+    padding: 25px 15px 5px 15px;
+    border-bottom:none;
+}
+
+.equip-border-top td,
+.ameni-border-top td,
+.charge-border-top td {
+    border-top: none;
+}
+
+.equip-border-top,
+.ameni-border-top,
+.charge-border-top {
+    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.equip-border-top th,
+.ameni-border-top th,
+.charge-border-top th {
+    border-top: none;
+}
+
+.equip-table,
+.ameni-table,
+.charge-table {
+    max-width: 400px;
+    width: 100%;
+    margin: 50px auto 120px auto;
+}
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:400px) {
+.title {
+    padding: 3% 5% 3% 7px;
+}
+
+.title::before {
+    right: 10px;
+}
+
+.title::after {
+    right: 10px;
+}
+
+.title::before,
+.title::after {
+    width: 10px;
+}
+}
+
+
+/* ================レスポンシブ用非表示================== */
+@media screen and (min-width:769px) {
+.sp-main-btn {
+    display: none;
+}
+
+.sp-concept-moji {
+    display: none;
+}
+
+.title2 h3 {
+    display: none;
+}
+
+.sp-dots {
+    display: none;
+}
+
+.sp-ab-img-right {
+    display: none;
+}
+
+.sp-main-moji {
+    display: none;
+}
+
+.sp-rooms-abso {
+    display: none;
+}
+
+}
